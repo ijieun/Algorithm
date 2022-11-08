@@ -1,4 +1,7 @@
-const n = require("fs").readFileSync("input.txt").toString().split("\n");
+const n = require("fs")
+  .readFileSync(__dirname + "/input.txt")
+  .toString()
+  .split("\n");
 
 let fib = [];
 for (let i = 0; i <= n; i++) {
