@@ -1,25 +1,31 @@
-const input = require("fs")
+// const input = require("fs")
+//   .readFileSync(__dirname + "/input.txt")
+//   .toString()
+//   .split("\n")
+//   .map(Number);
+const fs = require("fs");
+const input = fs
   .readFileSync(__dirname + "/input.txt")
   .toString()
+  .trim()
   .split("\n")
   .map(Number);
-console.log(input);
 
-var arr;
-for (var i = 0; i < 8; i++) {
-  for (var j = i + 1; j < 9; j++) {
-    if (
-      input.reduce((sum, item) => sum + item, 0) ===
-      input[i] + input[j] + 100
-    ) {
-      arr = input.filter((item) => item !== input[i] && input !== input[j]);
+const Total = input.reduce((r, v) => {
+  return r + v;
+}, 0);
+let answer = "";
+for (var i = 0; i < 9; i++) {
+  if (answer.length > 0) break;
+  for (let j = i + 1; j < 9; j++) {
+    if (Total - input[i] - input[j] == 100) {
+      const truth = input
+        .filter((_, k) => k != i && k != j)
+        .sort((a, b) => a - b);
+      answer = truth.join("\n");
+      console.log(answer);
       break;
     }
   }
-  if (!!arr) break;
 }
-
-arr.sort((a, b) => a - b);
-for (var i = 0; i < 7; i++) {
-  console.log(arr[i]);
-}
+//read&solved

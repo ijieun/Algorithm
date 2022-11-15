@@ -17,7 +17,10 @@
 //   break;
 // }
 
-const input = require("fs").readFileSync("/dev/stdin").toString().split("\n");
+const input = require("fs")
+  .readFileSync(__dirname + "/input.txt")
+  .toString()
+  .split("\n");
 const count = Number(input[0]);
 const nums = input[1].split(" ").map(Number);
 
