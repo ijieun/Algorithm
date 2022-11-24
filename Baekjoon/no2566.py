@@ -1,13 +1,15 @@
 # list = [3,23,85,34,17,74,25,52,65,10,7,39,42,88,52,14,72,63,87,42,18,78,53,45,18,84,53,34,28,64,85,12,16,75,36,55,21,77,45,35,28,75,90,76,1,25,87,65,15,28,11,37,28,74,65,27,75,41,7,89,78,64,39,47,47,70,45,23,65,3,41,44,87,13,82,38,31,12,29,29,80]
 
 max_num =0
+x=0
+y=0
 for i in range(9):
-    row = list(map(int, input().split()))
-    if max(row)>max_num:
-        max_num = max(row)
-        x = i+1
-        y = row.index(max_num)+1
+    line = list(map(int, input().split()))
+    if max(line)>max_num:
+        max_num = max(line)
+        x = i
+        y = line.index(max_num)
     
 print(max_num)
-print(x,y)
+print(x+1,y+1)
 # read&solved!
