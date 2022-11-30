@@ -1,8 +1,5 @@
 h,m,s = map(int, input().split())
-d = int(input())
-
-h,m,s = map(int,input().split(" "))
-sec = int(input())
+sec= int(input())
 
 # h:시각, m:분, s:초, sec:추가된 초
 #고려요소 1번째
