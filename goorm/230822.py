@@ -25,5 +25,5 @@ count = 0
 for row in count_map:
     for inner in row:
         if inner==k:
-            count +=1
+            count += 1
 print(count)
