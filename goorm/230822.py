@@ -17,13 +17,13 @@ for i in range(n):
 
                 # 인덱스가 리스트 범위 내에 있는지 확인
                 # 깃발 있는 자리에서는 카운트 증가X
-                if 0 <= x < n and 0 <= y < n and d[x][y]!=1:
+                if 0 <= x < n and 0 <= y < n and d[x][y] != 1:
                     count_map[x][y] += 1
 
 count = 0
 # 결과 출력
 for row in count_map:
     for inner in row:
-        if inner==k:
+        if inner == k:
             count += 1
 print(count)
