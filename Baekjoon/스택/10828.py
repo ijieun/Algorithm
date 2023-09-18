@@ -12,19 +12,19 @@ for _ in range(n):
     if com[0] == 'push':
         li.append(com[1])
     elif com[0] == 'top':
-        if len(li)==0:
+        if len(li) == 0:
             print(-1)
         else:
-            print(li[len(li)-1])
+            print(li[len(li) - 1])
     elif com[0] == 'size':
         print(len(li))
     elif com[0] == 'empty':
-        if len(li)==0:
+        if len(li) == 0:
             print(1)
         else:
             print(0)
     elif com[0] == 'pop':
-        if len(li)==0:
+        if len(li) == 0:
             print(-1)
         else:
             print(li.pop())
