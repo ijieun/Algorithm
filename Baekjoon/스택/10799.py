@@ -1,16 +1,14 @@
-g = input()
-li = []
-for i in g:
-    if i=='(':
-        li.append(i)
-        a = li.index(i)
-
-    elif i==')':
-        if li:
-            li.append(i)
-            b = li.index(i)
-            print(b-a)
-            li.pop()
-            li.pop()
-
-print(li)
+n = input()
+stack=[]
+cnt = 0
+for i in range(len(n)):
+    if n[i]=='(':
+        stack.append(i)
+    else:
+        if n[i-1]=='(':
+            stack.pop()
+            cnt += len(stack)
+        else:
+            stack.pop()
+            cnt+=1
+print(cnt)
