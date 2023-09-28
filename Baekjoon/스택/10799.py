@@ -1,9 +1,9 @@
 n = input()
-stack=[]
+stack = []
 cnt = 0
 for i in range(len(n)):
     if n[i]=='(':
-        stack.append(i)
+        stack.append('(')
     else:
         if n[i-1]=='(':
             stack.pop()
