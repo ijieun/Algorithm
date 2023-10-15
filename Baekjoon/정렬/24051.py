@@ -11,7 +11,7 @@ li= list(map(int, input().split()))
 def insertion_sort(li):
     count = 0
     result = -1
-    for i in range(1,n):
+    for i in range(1, n):
         newItem = li[i]
         loc = i-1
         while loc >= 0 and newItem < li[loc]:
