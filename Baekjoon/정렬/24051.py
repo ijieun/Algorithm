@@ -19,10 +19,10 @@ def insertion_sort(li):
             count += 1
             loc -= 1
             if count == k:
-                result = li[loc+1]
-        li[loc+1] = newItem
+                result = li[loc+1]        
         if loc + 1 != i:
-            count += 1 
+            count += 1
+            li[loc+1] = newItem
             if count == k:
                 result = li[loc+1]
     print(result)
