@@ -1,28 +1,36 @@
 from collections import deque
-import sys
-input = sys.stdin.readline
-graph_list ={}
 
-n,m,v = map(int, input().split())
-for _ in range(m):
-    a, b = map(int,input().split())
-    if a in graph_list:
-        graph_list[a].append(b)
-    else:
-        graph_list[a]=[b]
-    if b in graph_list:
-        graph_list[b].append(a)
-    else:
-        graph_list[b]=[a]
+#정점, 간선수, 시작점을 입력받음
+n, m, v = map(int, input().split())
+#초기값을 False로 만들어 그래프를 선언
+graph =[[False] * (n+1) for _ in range(n+1)]
 
-def BFS_WITH_ADJ_LIST(graph, root):
-    visited = []
-    queue = deque([root])
-    while queue:
-        k = queue.popleft()
-        if k not in visited:
-            visited.append(k)
-            if k in graph: # 추가된 부분
-                queue += sorted( list(set(graph[k]) - set(visited)))
-    return visited
-print(BFS_WITH_ADJ_LIST(graph_list,v))
+for i in range(m):
+    x,y = map(int, input().split())
+    graph[x][y]=1
+    graph[y][x]=1
+    
+visited1 = [False]*(n+1)
+visited2 = [False]*(n+1)
+
+def dfs(v):
+    visited1[v]=True
+    print(v, end=" ")
+    for i in range(1, n+1):
+        if not visited1[i] and graph[v][i]==1:
+            dfs(i)
+
+def bfs(v):
+    q = deque([v])
+    visited2[v] = True
+    while q:
+        v = q.popleft()
+        print(v, end=" ")
+        for i in range(1, n+1):
+            if not visited2[i] and graph[v][i]==1:
+                q.append(i)
+                visited2[i] = True
+      
+dfs(v)
+print()          
+bfs(v)
