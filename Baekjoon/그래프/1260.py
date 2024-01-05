@@ -1,4 +1,6 @@
 from collections import deque
+import sys
+input = sys.stdin.readline
 
 #정점, 간선수, 시작점을 입력받음
 n, m, v = map(int, input().split())
