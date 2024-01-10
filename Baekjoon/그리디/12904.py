@@ -1,8 +1,8 @@
 import sys
 input = sys.stdin.readline
 
-s=list(input().rstrip())
-t=list(input().rstrip())
+s = list(input().rstrip())
+t = list(input().rstrip())
 
 switch = False
 while t:
