@@ -13,4 +13,4 @@ for i in range(2, n+1):
         dp[i]=min(dp[i], dp[i//3]+1)
 
 # n인 경우의 연산 최솟값 출력
-print(dp[n])
+print(dp[n]) 
