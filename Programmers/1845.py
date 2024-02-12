@@ -3,7 +3,7 @@
 def solution(nums):
     answer = 0
     set_n = len(set(nums))
-    if len(nums)//2>set_n:
+    if len(nums)//2 > set_n:
         print(set_n)
     else:
         print(round(len(nums)/2))
