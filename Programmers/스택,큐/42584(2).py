@@ -7,7 +7,7 @@ def solution(prices):
         cnt = 0
         price = prices.popleft()
         for i in prices:
-            cnt +=1
+            cnt += 1
             if i<price:
                 break
         answer.append(cnt)
