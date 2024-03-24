@@ -1,7 +1,7 @@
 from functools import cmp_to_key
 # cmp_to_key 사용!
 
-def compare(x,y):
+def compare(x, y):
     # 나중에 들어온 요소가 앞으로 정렬됨 (뒤에거)
     if x+y > y+x:
         return 1
