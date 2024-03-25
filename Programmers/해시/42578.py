@@ -11,7 +11,7 @@ def solution(clothes):
             dict[kind] = 2
     for i in dict.values():
         # 전체 value끼리 곱해서 경우의 수 생성.
-        answer*=i
+        answer *= i
     # 전체 다 안입는 경우는 빼기
-    return answer-1
+    return answer - 1
 solution([["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]])
