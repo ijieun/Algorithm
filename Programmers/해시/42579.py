@@ -12,7 +12,7 @@ def solution(genres, plays):
         # 합계를 구함
         genres_order[genre] += v
         # 장르빼고 인덱스, 재생시간을 append
-        genres_plays[genre].append((i,v))
+        genres_plays[genre].append((i, v))
 
     # 내림차순 정렬
     for genre, _ in sorted(genres_order.items(), key=lambda x:-x[1]):
