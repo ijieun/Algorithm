@@ -29,7 +29,7 @@ for i in range(n):
                 else:
                     carry_happened = True
                     break
-            if carry_happened:
+            if carry_happened == True:
                 continue
                     # print(int(fir_li[l])+int(sec_li[l])+int(thr_li[l]))
                     # print(f"({int(fir_li[l])}+{int(sec_li[l])}+{int(thr_li[l])})")
@@ -42,7 +42,7 @@ for i in range(n):
                 str_value = 0
             max_value = max(max_value, str_value)
 
-if carry_happened or max_value==-99999:
+if carry_happened==True or max_value==-99999:
     print(-1)
 else:
     print(max_value)
